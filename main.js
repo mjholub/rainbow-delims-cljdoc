@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rainbow Delimiters for cljdoc.org
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.2.1
 // @description  Adds rainbow delimiters to code blocks on cljdoc.org
 // @author       Marcelina Hołub 
 // @match        https://cljdoc.org/*
@@ -69,7 +69,6 @@ class ColorUtils {
     }
 }
 
-// Color palette generator for rainbow delimiters
 class ColorPaletteGenerator {
     static generateBaseColors(count = 32) {
         const colors = [];
@@ -120,7 +119,7 @@ class ColorAdjuster {
     }
 }
 
-// Rainbow delimiters processor
+// core processor
 class RainbowDelimiters {
     constructor() {
         this.baseColors = ColorPaletteGenerator.generateBaseColors();
@@ -206,7 +205,6 @@ class RainbowDelimiters {
     }
 }
 
-// Initialize and run
 (function() {
     'use strict';
     
